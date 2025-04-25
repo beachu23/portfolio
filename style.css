@@ -1,0 +1,102 @@
+body {
+    /* Set line height to 1.5 times the font size
+         and use the OS’s UI font as the website font
+       */
+    font: 100%/1.5 system-ui;
+  }
+  
+nav ul, nav li {
+    display: contents;
+}
+
+nav {
+    display: flex;
+    margin-bottom: 1em;
+    border-bottom: 1px solid oklch(80% 3% 200);
+}
+
+nav a {
+    flex: 1;
+    text-align: center;
+    padding: 0.5em;
+    text-decoration: none;
+    color: inherit;
+    transition: border-bottom 0.2s ease, color 0.2s ease;
+}
+
+nav a.current {
+    border-bottom: 0.4em solid oklch(90% 2% 200);
+    padding-bottom: 0.1em;
+}
+
+nav a:hover {
+    border-bottom: 0.4em solid var(--color-accent);
+    padding-bottom: 0.1em;
+}
+
+:root {
+    --color-accent: oklch(65% 50% 0); /* Customize as you like */
+}
+
+html {
+    accent-color: var(--color-accent);
+}
+
+input, textarea, button {
+    font: inherit;
+  }
+  form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+    max-width: 50ch;
+    margin-inline: auto;
+  }
+
+  form label {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+  }
+  
+  input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    grid-column: 1 / -1;
+    justify-self: start; 
+  }
+  
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1em;
+    margin-block: 2em;
+  }
+  
+  .projects article {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    padding: 1em;
+    border: 1px solid oklch(80% 3% 200);
+    border-radius: 0.5em;
+    background: white;
+  }
+  
+  .projects h2 {
+    margin: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+  
+  h1 {
+    font-size: 400%;
+    margin-bottom: 0.5em;
+  }
+  
