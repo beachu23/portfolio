@@ -55,21 +55,20 @@ form {
 }
 
 form label {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: 1 / -1;
-    align-items: center; 
-    gap: 0.5em;
+    display: contents; /* important! lets label text and input be separate grid items */
 }
 
-input, textarea {
+form input,
+form textarea {
     box-sizing: border-box;
+    width: 100%;
 }
 
 form button {
     grid-column: 1 / -1;
     margin-top: 1em;
 }
+
   
   
 .projects {
