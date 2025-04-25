@@ -9,10 +9,29 @@
     <h1> Contact </h1>
     <nav> 
         <ul>
-            <li> <a href="index.html">Home</a></li>
+            <li> <a href="../index.html">Home</a></li>
             <li> <a href="projects/index.html">Projects</a></li>
             <li><a href="https://github.com/beachu23" target="_blank">GitHub</a></li>
+            <li> <a href="resume.html">Resume</a></li>
         </ul>
     </nav>
+    <form action="mailto:your_email@example.com" method="POST" enctype="text/plain">
+        <label>
+            Email:
+            <input name="email" type="email" required>
+        </label>
+        <br><br>
+        <label>
+            Subject:
+            <input name="subject">
+        </label>
+        <br><br>
+        <label>
+            Message:
+            <textarea name="body" rows="5" cols="30"></textarea>
+        </label>
+        <br><br>
+        <button>Send</button>
+    </form>
 </body>
 </html>
