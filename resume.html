@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Brandon Chu - CV</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <a href="index.html">Home</a> |
-        <a href="cv.html">CV</a>
+        <a href="cv.html" class="current">CV</a>
     </nav>
 
     <h1>Brandon Chu</h1>
-    <p>(408)343-9646 | <a href="mailto:brchu@ucsd.edu">brchu@ucsd.edu</a> | 
+    <p>(408)343-9646 | <a href="mailto:brchu@ucsd.edu">brchu@ucsd.edu</a> |
        <a href="https://www.linkedin.com/in/brandon-chu-67b681266" target="_blank">LinkedIn</a></p>
 
     <section>
@@ -20,7 +21,7 @@
             <h3>University of California, San Diego</h3>
             <p>BS in Cognitive Science with a Specialization in ML and Neural Computation</p>
             <p>Minor in Data Science</p>
-            <time datetime="2021-09">September 2021</time> – <time datetime="2025-06">June 2025</time>
+            <p>La Jolla, CA | <time datetime="2021-09">September 2021</time> – <time datetime="2025-06">June 2025</time></p>
         </article>
     </section>
 
@@ -29,59 +30,78 @@
 
         <article>
             <h3>Research Assistant - UCLA</h3>
-            <time datetime="2024-06">June 2024</time> – <time datetime="2024-09">September 2024</time>
+            <p>Westwood, CA | <time datetime="2024-06">June 2024</time> – <time datetime="2024-09">September 2024</time></p>
             <ul>
-                <li>Solo data analyst in a UX lab – led data science life cycle</li>
-                <li>Created visualizations like Sankey diagrams and 3D plots for publication</li>
-                <li>Contributed 8k+ lines of code to lab GitHub</li>
+                <li>Solo data analyst in a UX lab – responsible for the full data science life cycle</li>
+                <li>Explored and implemented multiple "scoring" systems to grade performances</li>
+                <li>Created Sankey diagrams, bar charts, 3D plots for publication</li>
+                <li>Performed advanced data wrangling and exploratory data analysis (EDA)</li>
+                <li>Conducted correlational analyses and t-tests using Pandas (Python)</li>
+                <li>Contributed 8k+ lines of code to an established lab GitHub</li>
+                <li>Wrote meeting minutes and coordinated communication with lab members</li>
             </ul>
         </article>
 
         <article>
             <h3>Data Science Intern - Hey Social Good</h3>
-            <time datetime="2023-10">October 2023</time> – <time datetime="2024-06">June 2024</time>
+            <p>La Jolla, CA | <time datetime="2023-10">October 2023</time> – <time datetime="2024-06">June 2024</time></p>
             <ul>
-                <li>Built internal website using Bing API, JavaScript</li>
-                <li>Automated data workflows with Python and SQL</li>
+                <li>Developed internal website using Bing Web Search API, CSS, and JavaScript (Node.js)</li>
+                <li>Conducted prompt engineering and testing for internal language model</li>
+                <li>Automated third-party verification workflows with Python and SQL (PostgreSQL)</li>
+                <li>Represented company at Business for Good Summit, pitching to 50+ investors</li>
             </ul>
         </article>
 
         <article>
             <h3>Social Chair - TASA @ UCSD</h3>
-            <time datetime="2022-01">January 2022</time> – <time datetime="2023-06">June 2023</time>
+            <p>La Jolla, CA | <time datetime="2022-01">January 2022</time> – <time datetime="2023-06">June 2023</time></p>
             <ul>
-                <li>Planned events with 200+ attendees and managed club communications</li>
+                <li>Coordinated joint events with over 200 attendees alongside other campus clubs</li>
+                <li>Directed external communications to manage club and event payments</li>
+                <li>Spearheaded planning initiatives for retreats, fundraisers, and in-club events</li>
             </ul>
         </article>
     </section>
 
     <section>
         <header><h2>Projects</h2></header>
+        <div class="projects">
+            <article>
+                <h3><a href="https://beachu23.github.io/Pick-Ban-Analysis/" target="_blank">LoL Pick-Ban Analysis</a></h3>
+                <time datetime="2024-01">January 2024</time> – <time datetime="2024-03">March 2024</time>
+                <ul>
+                    <li>Analyzed pick-ban selection for all 2022 professional League of Legends matches</li>
+                    <li>Performed data wrangling, permutation tests, missing-ness analysis, and visualization</li>
+                    <li>Built a Support Vector Classifier model off PCA/MCA transformed data</li>
+                </ul>
+            </article>
 
-        <article>
-            <h3><a href="https://beachu23.github.io/Pick-Ban-Analysis/" target="_blank">LoL Pick-Ban Analysis</a></h3>
-            <time datetime="2024-01">January 2024</time> – <time datetime="2024-03">March 2024</time>
-            <p>Used PCA/MCA + SVM to model pick/ban strategy across pro games</p>
-        </article>
+            <article>
+                <h3>DinoDecipher</h3>
+                <time datetime="2024-02">February 2024</time>
+                <ul>
+                    <li>Built a Convolutional Neural Network (CNN) in PyTorch to classify dinosaurs with 95% accuracy</li>
+                    <li>Designed and prototyped a child-friendly dinosaur learning app using Figma</li>
+                </ul>
+            </article>
 
-        <article>
-            <h3>DinoDecipher</h3>
-            <time datetime="2024-02">February 2024</time>
-            <p>Built CNN model in PyTorch to classify dinosaurs with 95% accuracy</p>
-        </article>
-
-        <article>
-            <h3>RatMap NYC</h3>
-            <time datetime="2023-12">December 2023</time>
-            <p>Visualized spatial rat sightings in NYC using GeoPandas</p>
-        </article>
+            <article>
+                <h3>RatMap NYC</h3>
+                <time datetime="2023-12">December 2023</time>
+                <ul>
+                    <li>Created an interactive visualization mapping rat reports across NYC using GeoPandas and Contextily</li>
+                    <li>Highlighted whether rats were observed on site at report locations</li>
+                </ul>
+            </article>
+        </div>
     </section>
 
     <section>
         <header><h2>Technical Skills</h2></header>
         <ul>
             <li><strong>Languages:</strong> Java, Python, SQL (Postgres), JavaScript, HTML/CSS, R</li>
-            <li><strong>Developer Tools:</strong> Git, Anaconda, VS Code, Figma</li>
+            <li><strong>Developer Tools:</strong> Git, Anaconda, VS Code, Visual Studio, Eclipse, Figma</li>
             <li><strong>Libraries:</strong> pandas, NumPy, Matplotlib, Seaborn, Beautiful Soup, GeoPandas</li>
         </ul>
     </section>

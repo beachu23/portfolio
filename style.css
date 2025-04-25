@@ -103,3 +103,25 @@ h1 {
     font-size: 400%;
     margin-bottom: 0.5em;
 }
+
+
+section {
+    margin-bottom: 2em;
+    padding: 2em;
+    border-radius: 0.75em;
+    background: oklch(98% 3% 200);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section header h2 {
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.2em;
+    margin-bottom: 1em;
+}
+
+article {
+    background: transparent; 
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 1.5em;
+}
