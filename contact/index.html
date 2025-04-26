@@ -3,24 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Contact </title>
+    <title>Contact</title>
     <link rel="stylesheet" href="../style.css">
-
-
+    <script src="../global.js" type="module"></script>
 </head>
 <body>
-    <h1> Contact </h1>
-    <nav> 
-        <ul>
-            <li> <a href="../index.html">Home</a></li>
-            <li> <a href="../projects/index.html">Projects</a></li>
-            <li><a href="https://github.com/beachu23" target="_blank">GitHub</a></li>
-            <li> <a href="../resume.html">Resume</a></li>
-            <li><a class="current" href="index.html">Contact</a></li>
-
-        </ul>
-    </nav>
-    <form action="mailto:your_email@example.com" method="POST" enctype="text/plain">
+    <h1>Contact</h1>
+    
+    <form action="mailto:your_email@example.com" method="GET">
         <label for="email">Email:</label>
         <input id="email" name="email" type="email" required>
     
@@ -32,6 +22,5 @@
     
         <button type="submit">Send</button>
     </form>
-    
 </body>
 </html>
