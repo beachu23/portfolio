@@ -57,7 +57,10 @@ form textarea {
     padding: 0.5em;
     border: 1px solid var(--border-color);
     border-radius: 0.5em;
+    background-color: canvas;
+    color: canvastext;
 }
+
 
 .projects article {
     display: grid;
