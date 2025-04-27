@@ -9,7 +9,7 @@ let pages = [
   { url: '', title: 'Home' },
   { url: 'projects/', title: 'Projects' },
   { url: 'contact/', title: 'Contact' },
-  { url: '../resume/', title: 'Resume' },
+  { url: 'resume.html', title: 'Resume' },
   { url: 'https://github.com/beachu23', title: 'GitHub' }, 
 ];
 
@@ -67,4 +67,24 @@ select.addEventListener('input', function(event) {
 if ("colorScheme" in localStorage) {
   document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
   select.value = localStorage.colorScheme;
+}
+
+export async function fetchJSON(url) {
+  try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+if (!response.ok) {
+  throw new Error(`Failed to fetch projects: ${response.statusText}`);
+}
+
+const data = await response.json();
+return data;
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
 }
