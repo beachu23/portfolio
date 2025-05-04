@@ -109,3 +109,82 @@ article {
     border-radius: 0;
     margin-bottom: 1.5em;
 }
+
+#projects-pie-plot {
+    max-width: 20em;
+    margin-block: 2em;
+    overflow: visible;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+  }
+  
+  .legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    border: 1px solid var(--border-color);
+    border-radius: 0.5em;
+    padding: 1em;
+    gap: 1em;
+    flex: 1;
+    background: oklch(98% 3% 200);
+  }
+  
+  .legend li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    list-style: none;
+  }
+  
+  .legend li.selected {
+    --color: oklch(60% 45% 0) !important;
+  }
+  
+  .swatch {
+    width: 1em;
+    height: 1em;
+    background-color: var(--color);
+    display: inline-block;
+    aspect-ratio: 1 / 1;
+    border-radius: 3px;
+  }
+  
+  path {
+    transition: 300ms;
+    cursor: pointer;
+  }
+  
+  svg:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+  }
+  
+  path.selected {
+    fill: var(--color);
+  }
+  
+  .searchBar {
+    width: 100%;
+    max-width: 30em;
+    padding: 0.5em;
+    margin: 2em auto;
+    display: block;
+    border-radius: 0.5em;
+    border: 1px solid var(--border-color);
+    background: white;
+    font-size: 1em;
+  }
+  
+  .project-year {
+    color: gray;
+    font-family: Baskerville, serif;
+    font-variant-numeric: oldstyle-nums;
+    margin-top: 0.5em;
+  }
+  
