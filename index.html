@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brandon Chu: Personal site and portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="global.js" type="module"></script>
-</head>
-<body style="max-width: 100ch; margin: 0 auto; padding: 1em;">
-    <h1> Brandon Chu </h1>
-    <p> "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" </p>
-    <img src="images/pic of me.jpg" alt="a headshot of me" style="width:300px;">
-    <h2>Latest Projects</h2>
-    <div class="projects"></div>
-
-    <h2>GitHub Profile</h2>
-    <div id="profile-stats"></div>
-
-    <script src="./global.js" type="module"></script>
-    <script src="./index.js" type="module" defer></script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Meta Analysis</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script type="module" src="../global.js"></script>
+    <script type="module" src="meta.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Meta Analysis</h1>
+      <section>
+        <h2>Summary Statistics</h2>
+        <div id="summary-stats">
+        </div>
+      </section>
+      <section>
+        <h2>Commits Over Time</h2>
+        <svg id="scatterplot" width="600" height="400"></svg>
+      </section>
+      <section>
+        <h2>Commits by Author</h2>
+        <svg id="barchart" width="600" height="400"></svg>
+      </section>
+    </main>
+  </body>
 </html>
-
-
