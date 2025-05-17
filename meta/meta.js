@@ -1,11 +1,15 @@
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 let data = await d3.csv('../lib/loc.csv', d3.autoType);
+
+data.forEach(d => {
+  d.timestamp = new Date(d.datetime);
+});
+
 displayStats(data);
-
 vis1(data);
-
 vis2(data);
+
 
 function displayStats(data) {
   let commits = data.length;
