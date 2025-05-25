@@ -183,16 +183,28 @@ path.selected {
 
 /* Lab 8 Styles */
 
+circle {
+  transition: all 200ms;
+  fill: steelblue;
+  opacity: 0.7;
+}
+
+circle:hover {
+  opacity: 1;
+}
+
+@starting-style {
+  circle {
+    r: 0;
+  }
+}
+
 .loc {
   display: flex;
   width: 0.5em;
   aspect-ratio: 1;
   background: steelblue;
   border-radius: 50%;
-  transition: r 0.3s ease;
-  @starting-style {
-    r: 0;
-  }
 }
 
 #files {
