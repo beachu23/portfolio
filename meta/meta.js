@@ -239,4 +239,6 @@ loadData().then((data) => {
       updateScatterPlot(data, commits.filter(d => d.datetime <= stepData.datetime));
       updateFileDisplay(commits.filter(d => d.datetime <= stepData.datetime));
     });
+    onTimeSliderChange(commits, data); // <-- call it once on load
+
 });
