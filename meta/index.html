@@ -2,28 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Meta-Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meta Analysis</title>
+    <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm" type="module"></script>
-    <script src="../global.js" type="module"></script>
     <script src="meta.js" type="module"></script>
   </head>
   <body>
-    <main>
-      <h1>Meta-Analysis</h1>
+    <header>
+      <h1>📊 Meta Analysis</h1>
+      <label>
+        Show commits until:
+        <input type="range" id="commit-progress" min="0" max="100" value="100" />
+        <time id="commit-time"></time>
+      </label>
+    </header>
 
-      <h2>Summary Statistics</h2>
-      <div id="summary"></div>
-
-      <h2>Commits by Hour</h2>
-      <div class="vis" id="vis1">
-        <svg></svg>
+    <div id="scrolly-1">
+      <div id="scatter-story"></div>
+      <div id="scatter-plot">
+        <div id="chart"></div>
+        <dl id="commit-tooltip" class="info tooltip" hidden>
+          <dt>Commit</dt>
+          <dd><a href="" id="commit-link" target="_blank"></a></dd>
+          <dt>Date</dt>
+          <dd id="commit-date"></dd>
+        </dl>
+        <p id="selection-count">No commits selected</p>
+        <dl id="language-breakdown" class="stats"></dl>
       </div>
+    </div>
 
-      <h2>Commits over Time</h2>
-      <div class="vis" id="vis2">
-        <svg></svg>
-      </div>
-    </main>
+    <div id="files"></div>
   </body>
 </html>
